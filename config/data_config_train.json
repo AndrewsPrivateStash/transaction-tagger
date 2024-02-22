@@ -1,0 +1,13 @@
+{
+    "columns": {
+        "pl_type": {"type": "feature", "encoding": "one-hot"},
+        "act_type": {"type": "feature", "encoding": "one-hot"},
+        "act_subtype": {"type": "feature", "encoding": "one-hot"},
+        "tx_name": {"type": "feature", "encoding": "bow", "analyzer": "word", "ngram" : [1,1], "token_pattern" : "(?u)\\b[a-zA-Z]{2,}\\b"},
+        "tx_desc": {"type": "feature", "encoding": "bow", "analyzer": "char", "ngram" : [2,3], "token_pattern" : ""},
+        "tx_amt": {"type": "feature", "encoding": "minmax"},
+        "istn_id": {"type": "feature", "encoding": "one-hot"},
+        "brand_id": {"type": "class", "encoding": "none"},
+        "brand_name": {"type":"meta", "encoding": "none"}
+    }
+}

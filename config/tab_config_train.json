@@ -1,0 +1,9 @@
+{
+    "columns": {
+        "tx_desc": {"type": "feature", "encoding": "bow", "analyzer": "char", "ngram" : [2,3], "token_pattern" : ""},
+        "tx_amt": {"type": "feature", "encoding": "minmax"},
+        "brand_id": {"type": "class", "encoding": "none"},
+        "brand_name": {"type":"meta", "encoding": "none"},
+        "transactionId" : {"type":"meta", "encoding": "none"}
+    }
+}
